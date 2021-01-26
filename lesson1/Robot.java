@@ -1,7 +1,6 @@
 package lesson1;
 
-public class Robot implements Skills{
-
+public class Robot implements Skills {
     private String name;
     private int speedRun;
     private double heightJump;
@@ -12,26 +11,30 @@ public class Robot implements Skills{
         this.heightJump = heightJump;
     }
 
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     public int getSpeedRun() {
         return speedRun;
     }
 
+    @Override
     public double getHeightJump() {
         return heightJump;
     }
 
     @Override
-    public void run() {
-        System.out.println("Робот " + name+" может бежать со скоростью " + speedRun + " км/ч.");
+    public int run() {
+        System.out.println("Робот " + name + " может бежать со скоростью " + getSpeedRun() + " км/ч.");
+        return speedRun;
     }
 
     @Override
-    public void jump() {
-        System.out.println("Робот " + name+" может прыгнуть на высоту " + heightJump + " метров.");
+    public double jump() {
+        System.out.println("Робот " + name + " может прыгнуть на высоту " + heightJump + " метров.");
+        return heightJump;
     }
-
 }

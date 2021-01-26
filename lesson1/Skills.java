@@ -1,8 +1,13 @@
 package lesson1;
 
 public interface Skills {
+    public int run();
 
-    public void run();
-    public void jump();
+    public double jump();
 
+    public String getName();
+
+    public int getSpeedRun();
+
+    public double getHeightJump();
 }
